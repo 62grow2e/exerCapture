@@ -2,23 +2,19 @@ import codeanticode.gsvideo.*;
 import gifAnimation.*;
 import java.util.Date;
 
-import java.applet.*;
-import java.awt.*;
-import java.awt.event.*;
-
 GSCapture video;
 GifMaker gifExport;
 
 boolean isCapturing = false;
-GifMaker[] gifAnimes = new GifMaker[10];
+GifMaker[] gifAnimes = new GifMaker[3];
 
 int videoWidth = 640;
 int videoHeight = 480;
 int thumbnailScale = 10;
 
 void setup(){
-  size(640, 528);
-  video =new GSCapture(this, videoWidth, videoHeight+videoHeight/thumbnailScale);
+  size(videoWidth, videoHeight +videoHeight/thumbnailScale);
+  video =new GSCapture(this, videoWidth, videoHeight);
   video.start();
 }
 
